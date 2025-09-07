@@ -37,7 +37,7 @@ vector<string> genearateStrings(int n) {
 	vector<string> res;
 
 
-	sovle(0, n, s, res);
+	solve(0, n, s, res);
 
 	return res;
 }
@@ -49,4 +49,15 @@ int main() {
 
 	vector<string> binaryStrings = genearateStrings(n);
 
+	for(string s : binaryStrings) {
+		cout << s << " ";
+	}
+
+	cout << endl;
+
+	return 0;
 }
+
+
+// Time complexity - O(2^n) where n is the length of the string
+// space complexity - O(n) as we are using extra space to store the result strings
