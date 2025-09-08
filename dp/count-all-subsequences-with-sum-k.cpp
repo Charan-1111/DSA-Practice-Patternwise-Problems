@@ -21,29 +21,32 @@
 
 using namespace std;
 
-int solve(int i, int n, vector<int> &arr, int k) {
+int solve(int i, int n, vector<int> &arr, int k, vector<vector<int>> &dp) {
 	if(k == 0) return 1;
 
 	if(i >= n) {
 		return k==0;
 	}
 
+	if(dp[i][k] != -1) return dp[i][k];
+
 
 	int no_take = 0, take = 0;
 
 	// don't consider the current element into the subset;
-	no_take = solve(i+1, n, arr, k);
+	no_take = solve(i+1, n, arr, k, dp);
 
 	// consider the current element into the subset
 	if(arr[i] <= k) 
-		take = solve(i+1, n, arr, k-arr[i]);
+		take = solve(i+1, n, arr, k-arr[i], dp);
 
 
-	return take + no_take;
+	return dp[i][k] = take + no_take;
 }
 
 int countSubSequencesWithSumK(vector<int> &arr, int n, int k) {
-	return solve(0, n, arr, k);
+	vector<vector<int>> dp(n+1, vector<int>(k+1, -1));
+	return solve(0, n, arr, k, dp);
 }
 
 int main() {
@@ -69,9 +72,6 @@ int main() {
 }
 
 
-// Time Complexity - O(2^n)
-// Space Complexity - O(1)
 
-
-// This will give TLE if the test case size is big
-// Can be solved by using Dynamic Programming - (refer the same problem in DP section)
+// Time Complexity - O(n^2)
+// Space Complexity - O(n^2)
