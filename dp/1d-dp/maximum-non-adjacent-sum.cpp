@@ -62,3 +62,11 @@ int main() {
     cout << "Maximum non adjacent sum is : " << result << endl;
     return 0;
 }
+
+
+// Recursion time complexity - O(2^n)
+// Recursion space complexity - O(2^n)
+
+
+// Dp time complexity - O(n)
+// Dp space complexity - O(n)
