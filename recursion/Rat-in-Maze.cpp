@@ -111,5 +111,5 @@ int main() {
 }
 
 
-// Time complexity - O()
-// Space complexity - O()
+// Time complexity - O(4^(n^2)
+// Space complexity - O(n^2 + (k*n^2)
