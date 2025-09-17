@@ -67,6 +67,8 @@ int main() {
 	return checkIfSubsequecnceExists(arr, n, k);
 }
 
+// Recursion time complexity - O(2^n)
+// Recursion space complexity - O(2^n)
 
-// Time Complexity - O(n^2)
-// Space complexity - O(n^2)
+// DP Time Complexity - O(n^2)
+// DP Space complexity - O(n^2)
