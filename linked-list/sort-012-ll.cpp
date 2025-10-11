@@ -104,7 +104,7 @@ int main() {
         head = insertIntoDLL(head, data);
     }
     
-    head = sortLL(head);
+    head = sortList(head);
     
     return 0;
 }
