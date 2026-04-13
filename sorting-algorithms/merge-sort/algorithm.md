@@ -34,3 +34,5 @@ mergeSort(arr, left, right):
 	- [ 27, 43 ] -> Merge with [ 38 ] => [ 27, 38, 43 ]
 	- [ 3, 9 ] and [ 82, 10 ] => [ 3, 9, 10, 82 ]
 	- Final :- [ 3, 9, 10, 27, 38, 43, 82 ]
+
+- [CPP CODE](code.cpp)
