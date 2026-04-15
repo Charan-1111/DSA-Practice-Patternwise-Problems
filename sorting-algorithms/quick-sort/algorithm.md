@@ -40,3 +40,5 @@ Step 2 :- Choose pivot -> 9
 Rearrange :- [ 1, 5, 7, 8, 9, 10 ]
 
 Repeat :- Final -> [ 1, 5, 7, 8, 9, 10 ]
+
+- [CPP CODE](code.cpp)
